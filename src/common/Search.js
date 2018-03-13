@@ -17,7 +17,7 @@ export default class Search extends Component{
       <View style={styles.wrap}>
         <View style={styles.search_wrap}></View>
         <TouchableOpacity style={styles.btn} onPress={this.AlertEvent}>
-          <Text style={styles.txt}>搜素1</Text>
+          <Text style={styles.txt}>搜素2</Text>
         </TouchableOpacity>
       </View>
     )
