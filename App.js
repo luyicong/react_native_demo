@@ -16,8 +16,7 @@ import FlexBox from './src/common/FlexBox';
 import Header from './src/common/Header';
 import Search from './src/common/Search';
 
-type Props = {name:'123456'};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>

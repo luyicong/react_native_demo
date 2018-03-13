@@ -4,20 +4,39 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Button
+  TextInput,
+  Image
 } from 'react-native';
 
 export default class Search extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      Text:''
+    }
+  }
   //点击搜索事件
   AlertEvent = () => {
-    alert('你点击了搜索！')
+    alert(this.state.Text)
+  }
+  //监听文本框值变化
+  InputChange = (Text) => {
+    this.setState({Text})
   }
   render() {
     return (
       <View style={styles.wrap}>
-        <View style={styles.search_wrap}></View>
+        <View style={styles.search_wrap}>
+          <TextInput 
+            style={styles.text_input}
+            underlineColorAndroid="transparent"
+            onChangeText={this.InputChange}
+            placeholder="请输入关键字"
+            value={this.state.Text}
+          />
+        </View>
         <TouchableOpacity style={styles.btn} onPress={this.AlertEvent}>
-          <Text style={styles.txt}>搜素2</Text>
+          <Text style={styles.btn_txt}>搜素</Text>
         </TouchableOpacity>
       </View>
     )
@@ -48,8 +67,13 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems: 'center',
   },
-  txt:{
+  btn_txt:{
     color:'#fff',
-    fontSize:18
+    fontSize:18,
+  },
+  text_input:{
+    height:45,
+    flex:1,
+    fontSize:16,
   }
 })

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 export default class Header extends Component{
@@ -14,6 +15,14 @@ export default class Header extends Component{
         </View>
         <View style={styles.com_content}>
           <Text>content</Text>
+          <Image 
+            source={{uri: 'https://img.alicdn.com/simba/img/TB1y4WJo3vD8KJjy0FlSuugBFXa.jpg'}}
+            style={{width:160,height:200}}
+            />
+            <Image 
+            source={require('./img/111.jpg')}
+            style={{width:300,height:120}}
+            />   
         </View>
       </View>
     )
