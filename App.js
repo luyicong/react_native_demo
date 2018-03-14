@@ -15,17 +15,28 @@ import {
 import FlexBox from './src/common/FlexBox';
 import Header from './src/common/Header';
 import Search from './src/common/Search';
+import MyNav from './src/common/MyNav';
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       {/*<View style={styles.container}>
+//           <Header></Header>
+//           <Search></Search>
+//       </View>*/}
+//     );
+//   }
+// }
 
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-          <Header></Header>
-          <Search></Search>
-      </View>
+      <MyNav></MyNav>
     );
   }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
